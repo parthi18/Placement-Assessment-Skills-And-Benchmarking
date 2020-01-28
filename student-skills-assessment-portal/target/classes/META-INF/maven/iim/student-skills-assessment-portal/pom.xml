@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>iim</groupId>
+	<artifactId>student-skills-assessment-portal</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>student-skills-assessment-portal</name>
+	<description>Demo project for Spring Boot</description>
+
+<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <start-class>iim.student.skills.assessment.portal.StudentSkillsAssessmentPortalApplication</start-class>
+</properties>
+   
+<dependencies>
+<!-- Compile -->
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-tomcat</artifactId>
+ <scope>provided</scope>
+</dependency>
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-jdbc</artifactId>
+ <scope>provided</scope>
+</dependency>
+
+<!-- Spring boot jdbc dependency -->
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>-->
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+
+ <dependency>
+      <groupId>com.oracle.ojdbc</groupId>
+      <artifactId>ojdbc8</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+<dependency>
+<groupId>javax.servlet</groupId>
+<artifactId>jstl</artifactId>
+</dependency>
+<dependency>
+<groupId>org.apache.tomcat.embed</groupId>
+<artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+<dependency>
+<groupId>javax.servlet</groupId>
+<artifactId>javax.servlet-api</artifactId>
+</dependency>
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-tx</artifactId>
+</dependency>
+
+<!-- Need this to compile JSP -->
+<dependency>
+<groupId>org.eclipse.jdt.core.compiler</groupId>
+<artifactId>ecj</artifactId>
+<version>4.6.1</version>
+<scope>provided</scope>
+</dependency>
+
+<!-- Optional, for bootstrap -->
+<dependency>
+<groupId>org.webjars</groupId>
+<artifactId>bootstrap</artifactId>
+<version>3.3.7</version>
+</dependency>
+
+<!-- Test -->
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-test</artifactId>
+<scope>test</scope>
+</dependency>
+
+</dependencies>
+<build>
+<plugins>
+<!-- Package as an executable jar/war -->
+<plugin>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-maven-plugin</artifactId>
+ <configuration>
+   <mainClass>iim.student.skills.assessment.portal.StudentSkillsAssessmentPortalApplication</mainClass>
+ </configuration>
+ <executions>
+   <execution>
+     <goals>
+       <goal>repackage</goal>
+     </goals>
+   </execution>
+ </executions>
+</plugin>
+</plugins>
+</build>
+</project>
+
+
