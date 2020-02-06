@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -79,11 +80,51 @@
                   </div>
                          
               </div>
-              
+              <form action="AddQuestion">
+    
+                <input type="text" name="questionId" />
+				<input type="text" name="questionTypeId"/>
+				<input type="text" name="question"/>
+				<input type="text" name="choice1"/>
+				<input type="text" name="choice2"/>
+				<input type="text" name="choice3"/>
+				<input type="text" name="choice4"/>
+				<input type="text" name="answer"/>
+				<input type="text" name="strAnswer"/>
+
+				<input type="Submit" name="Submit">	
+			</form>
+
+
+
 
                <div class="scroll-down"></div>
-
+<br>
+<br>
         
+<table border=1>
+<tr>
+			
+            <td>question</td>
+            <td>choice1</td>
+            <td>choice2</td>
+            <td>choice3</td>
+            <td>choice4</td>
+
+        </tr>
+        <c:forEach items="${Questions}" var="quest">
+        <tr> 
+        
+         <td>${quest.question}</td>
+         <td>${quest.choice1}</td>
+         <td>${quest.choice2}</td>  
+         <td>${quest.choice3}</td>
+         <td>${quest.choice4}</td>        
+		</tr>
+		</c:forEach>
+    </table>
+    
+
 
             
             <!--------------- hero section ends here --------------->

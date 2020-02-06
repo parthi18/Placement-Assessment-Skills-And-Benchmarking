@@ -14,6 +14,33 @@
 <input type="text" name="choice2"/>
 
 <input type="Submit" name="Submit">
+
+
+<table th:if="${ not #lists.isEmpty(questions) }" border=1>
+        <tr>
+            <td></td>
+            <td>Password</td>
+            <td>Email</td>
+            <td>Title</td>
+            <td>Sex</td>
+            <td>Salary</td>
+            <td>Age</td>
+        </tr>
+        <tr th:each="question : ${questions}">
+            <td th:text="${question.choice1}"></td>
+   <td th:text="${question.choice2}"></td>        
+</tr>
+    </table>
 </form> 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

@@ -38,13 +38,6 @@
  <scope>provided</scope>
 </dependency>
 
-<!-- Spring boot jdbc dependency -->
-<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
-<dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-jdbc</artifactId>
-</dependency>-->
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 
  <dependency>
       <groupId>com.oracle.ojdbc</groupId>

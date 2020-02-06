@@ -3,4 +3,5 @@ iim\student\skills\assessment\portal\Model\User.class
 iim\student\skills\assessment\portal\dao\UserDAO.class
 iim\student\skills\assessment\portal\StudentSkillsAssessmentPortalApplication.class
 iim\student\skills\assessment\portal\Controller\MainController.class
+iim\student\skills\assessment\portal\dao\UserDAOImpl$1.class
 iim\student\skills\assessment\portal\Model\Questions.class

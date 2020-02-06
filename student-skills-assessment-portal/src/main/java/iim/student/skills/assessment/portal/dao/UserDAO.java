@@ -3,7 +3,7 @@
  */
 package iim.student.skills.assessment.portal.dao;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import iim.student.skills.assessment.portal.Model.Questions;
 
@@ -13,9 +13,11 @@ import iim.student.skills.assessment.portal.Model.Questions;
  */
 public interface UserDAO {
 	
-	boolean authenticationSuccess(String loginname,String password);
+	boolean authenticationSuccess(String username,String password);
 
 	void addQuestions(Questions questions);
 	
 	//public ArrayList<E> ShowQuestions(int questionId);
+	
+	List<Questions> ShowQuestions(int questionId);
 }
