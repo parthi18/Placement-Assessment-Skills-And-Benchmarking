@@ -57,7 +57,7 @@ public class MainController {
 	    	for (Iterator<Questions> iterator = questionsList.iterator(); iterator.hasNext();) {
 	    		i=i+1;
 				questions = (Questions) iterator.next();
-				sb.append("\"").append(questions.getQuestion()).append("\"");
+				sb.append("").append(questions.getQuestion()).append("");
 				s += questions.getQuestion();
 				if(i+1 < questionsList.size()){
 		            sb.append(",");

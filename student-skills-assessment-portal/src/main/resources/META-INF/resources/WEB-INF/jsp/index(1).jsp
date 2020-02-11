@@ -1,23 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-
-<title>Insert title here</title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-
-<meta charset="UTF-8">
+ <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="author" content="harrnish">
 
       <title>Placement Website | PARTHI</title>
 
       <!-- stylesheet -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="style.css">
 
       <!-- bootstrap cdns -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -27,15 +22,15 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
       <!-- terminal effect -->
-      <script src="js/t.min.js"></script>
+      <script src="t.min.js"></script>
 
       <!-- for on scroll animations -->
-      <link rel="stylesheet" href="css/animate.css">
-      <script src="js/wow.min.js"></script>
+      <link rel="stylesheet" href="animate.css">
+      <script src="wow.min.js"></script>
       <script src="jquery-1.10.2.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="css/animation title/component.css">
+      <link rel="stylesheet" type="text/css" href="animation title/component.css">
       
-
+<title>Insert title here</title>
 </head>
 <body>
       <div class="wrapper">
@@ -59,10 +54,10 @@
   <div class="nav">
     <div class="nav__content">
       <ul class="nav__list">
-        <li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li>
-        <li class="nav__list-item"><a href="#" class="hover-target">studio</a></li>
-        <li class="nav__list-item"><a href="#" class="hover-target">news</a></li>
-        <li class="nav__list-item"><a href="#" class="hover-target">contact</a></li>
+        <li class="nav__list-item active-nav"><a href="#" class="hover-target">pugal</a></li>
+        <li class="nav__list-item"><a href="#" class="hover-target">pugal</a></li>
+        <li class="nav__list-item"><a href="#" class="hover-target">pugal</a></li>
+        <li class="nav__list-item"><a href="#" class="hover-target">pugal</a></li>
       </ul>
     </div>
   </div>    
@@ -78,31 +73,58 @@
 
     
             <!--------------- hero section starts here --------------->
-              <div class="section full-height over-hide wow fadeInUp"data-wow-delay="0.2s"> 
+              <div class="section full-height over-hide wow fadeInUp" > 
                   <div class="switch-wrap ">
                     <br>
                     <h1>HEADING FOR THE PROJECT</h1>
                   </div>
                          
               </div>
-              <div class="container" > 
-                    <!-- Codrops top bar -->
-                    
-                    <div class="os-phrases" id="os-phrases">
-                      <h2>Sometimes it's better</h2>
-                      <h2>to hide</h2>
-                      <h2>in order to</h2>
-                      <h2>survive evil</h2>
-                      <h2>Thanatos</h2>
-                      <h2>This fall</h2>
-                      <h2>Prepare</h2>
-                      <h2>Refresh to replay</h2>
-                    </div>
-                </div><!-- /container -->
+              <form action="AddQuestion">
+    
+                <input type="text" name="questionId" />
+				<input type="text" name="questionTypeId"/>
+				<input type="text" name="question"/>
+				<input type="text" name="choice1"/>
+				<input type="text" name="choice2"/>
+				<input type="text" name="choice3"/>
+				<input type="text" name="choice4"/>
+				<input type="text" name="answer"/>
+				<input type="text" name="strAnswer"/>
+
+				<input type="Submit" name="Submit">	
+			</form>
+
+
+
 
                <div class="scroll-down"></div>
-
+<br>
+<br>
         
+<table border=1>
+<tr>
+			
+            <td>question</td>
+            <td>choice1</td>
+            <td>choice2</td>
+            <td>choice3</td>
+            <td>choice4</td>
+
+        </tr>
+        <c:forEach items="${Questions}" var="quest">
+        <tr> 
+        
+         <td>${quest.question}</td>
+         <td>${quest.choice1}</td>
+         <td>${quest.choice2}</td>  
+         <td>${quest.choice3}</td>
+         <td>${quest.choice4}</td>        
+		</tr>
+		</c:forEach>
+    </table>
+    
+
 
             
             <!--------------- hero section ends here --------------->
@@ -479,8 +501,8 @@ new WOW().init(); // for more importain in this project..
 
 
 <!-- Title to select the test script -->
-<script src="css/select/anime.min.js"></script>
-    <script src="css/select/main.js"></script>
+<script src="select/anime.min.js"></script>
+    <script src="select/main.js"></script>
     <script>
     (function() {
       
@@ -541,7 +563,7 @@ new WOW().init(); // for more importain in this project..
 <!-- HOME PAGE ON THE USING ANIMATION FOR  script -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="css/animation title/modernizr.custom.js"></script>
+    <script src="animation title/modernizr.custom.js"></script>
     <script>
       $(document).ready(function() {
         $("#os-phrases > h2").lettering('words').children("span").lettering().children("span").lettering(); 
