@@ -71,7 +71,7 @@ public class MainController {
 	        model.addAttribute("Questions", questionsList);
 	        System.out.println("new"+s);
 
-		    return "quiz";
+		    return "index";
 	    }
 	/*public String toJavascriptArray(String[] arr){
 	    StringBuffer sb = new StringBuffer();

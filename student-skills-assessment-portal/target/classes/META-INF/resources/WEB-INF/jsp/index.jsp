@@ -165,7 +165,7 @@
       <section class="content">
         
         <div class="grid grid--effect-canopus">
-          <a href="#" class="grid__item grid__item--c1">
+          <a href="aptitude_practice_test(1).jsp" class="grid__item grid__item--c1">
             <div class="stack">
               <div class="stack__deco"></div>
               <div class="stack__deco"></div>
@@ -189,7 +189,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="grid__item grid__item--c2">
+          <a href="quiz.jsp" class="grid__item grid__item--c2">
             <div class="stack">
               <div class="stack__deco"></div>
               <div class="stack__deco"></div>
@@ -213,7 +213,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="grid__item grid__item--c3">
+          <a href="aptitude_practice_test(3).jsp" class="grid__item grid__item--c3">
             <div class="stack">
               <div class="stack__deco"></div>
               <div class="stack__deco"></div>
@@ -237,7 +237,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="grid__item grid__item--c1">
+          <a href="aptitude_practice_test(4).jsp" class="grid__item grid__item--c1">
             <div class="stack">
               <div class="stack__deco"></div>
               <div class="stack__deco"></div>
@@ -261,7 +261,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="grid__item grid__item--c2">
+          <a href="aptitude_practice_test(5).jsp" class="grid__item grid__item--c2">
             <div class="stack">
               <div class="stack__deco"></div>
               <div class="stack__deco"></div>
@@ -285,7 +285,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="grid__item grid__item--c3">
+          <a href="aptitude_practice_test(6).jsp" class="grid__item grid__item--c3">
             <div class="stack">
               <div class="stack__deco"></div>
               <div class="stack__deco"></div>
