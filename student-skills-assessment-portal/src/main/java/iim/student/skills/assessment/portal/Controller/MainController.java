@@ -5,13 +5,18 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import iim.student.skills.assessment.portal.Model.Questions;
+import iim.student.skills.assessment.portal.Model.User;
 import iim.student.skills.assessment.portal.dao.UserDAO;
 
 
@@ -20,6 +25,40 @@ public class MainController {
 	@Autowired
 	private UserDAO userDao;
 	  
+
+	@RequestMapping("/login")
+	  public String Login(Map<String,Object> model) {      
+		    return "login";
+	    }
+
+	@RequestMapping("/History_stu")
+	  public String History_stu(Map<String,Object> model) {      
+		    return "History_stu";
+	    }
+	@RequestMapping("/Test")
+	  public String Test(Map<String,Object> model) {      
+		    return "Test";
+	    }
+	@RequestMapping(value="/loginProcesss", method = RequestMethod.POST)
+	public String loginProcess(HttpServletRequest request, HttpServletResponse response,
+			@ModelAttribute("login") User login)
+	{
+		String successPage="";
+		if(userDao.authenticationSuccess(login.getUsername() , login.getPasswrod()))
+		{
+	  		System.out.print("JDBC success");
+	  		successPage = "index";
+		}
+		else
+		{
+			System.out.print("Login not success");
+			successPage="login";
+			//model.put("message", "HowToDoInJava Reader !!");
+		}
+		return successPage;
+		
+	}
+	
 	@RequestMapping("/home")
 	  public String home(Model model) {      
 		  	//model.put("message", "HowToDoInJava Reader !!");
@@ -71,8 +110,9 @@ public class MainController {
 	        model.addAttribute("Questions", questionsList);
 	        System.out.println("new"+s);
 
-		    return "index";
+		    return "login";
 	    }
+	
 	/*public String toJavascriptArray(String[] arr){
 	    StringBuffer sb = new StringBuffer();
 	    sb.append("[");

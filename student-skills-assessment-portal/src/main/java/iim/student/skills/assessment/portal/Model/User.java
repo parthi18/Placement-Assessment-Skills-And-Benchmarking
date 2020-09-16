@@ -7,6 +7,8 @@ public class User {
 	String passwrod;
 	int stafid;
 	int studentid;
+	
+	
 	public int getUserid() {
 		return userid;
 	}
@@ -36,6 +38,10 @@ public class User {
 	}
 	public void setStudentid(int studentid) {
 		this.studentid = studentid;
+	}
+	
+	public User() {
+		super();
 	}
 	
 	public User(int userid, String username, String passwrod, int stafid, int studentid) {
